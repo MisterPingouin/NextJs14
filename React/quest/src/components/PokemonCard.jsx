@@ -1,5 +1,16 @@
-function PokemonCard() {
-    return <figure className="poke"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"></img><figcaption>Bulbasaur</figcaption></figure>;
+function PokemonCard(props) {
+  console.log(props);
+
+  const { pokemon } = props;
+
+
+    return <figure className="poke">      
+    {pokemon.imgSrc ? (
+      <img src={pokemon.imgSrc} alt={pokemon.name} />
+    ) : (
+      <p>???</p>
+    )}<figcaption>{pokemon.name}</figcaption></figure>;
   }
   
   export default PokemonCard;
+
