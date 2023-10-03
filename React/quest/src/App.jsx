@@ -2,6 +2,7 @@ import PokemonCard from "./components/PokemonCard";
 import "./App.css";
 import PropTypes from "prop-types";
 import { useState } from "react";
+import NavBar from "./components/NavBar";
 
 PokemonCard.propTypes = {
 
@@ -83,9 +84,8 @@ function App() {
   return (
     <div>
       <PokemonCard pokemon={selectedPokemon} />
-      <button onClick={() => handleClick("previous")}>Précédent</button>
-      <button onClick={() => handleClick("next")}>Suivant</button>
-      </div>
+      <NavBar onButtonClick={handleClick} />
+    </div>
   );
 }
 
