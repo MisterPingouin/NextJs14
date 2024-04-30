@@ -2,8 +2,8 @@ import Links from "./links/Links";
 
 const Navbar = () => {
   return (
-    <div>
-      <div>Logo</div>
+    <div className="container h-25 mt-4 flex items-center justify-between">
+      <div className="font-bold text-3xl">Logo</div>
       <div>
         <Links />
       </div>
